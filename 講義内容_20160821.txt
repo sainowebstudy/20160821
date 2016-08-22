@@ -1,0 +1,124 @@
+--------------------
+bootstrap_05_02
+--------------------
+前回ex05を追加修正した元データ
+
+--------------------
+bootstrap_06
+--------------------
+「Surface Book」「Xbox One」「Outlook」「Microsoft ストア」を、PC、タブレット、スマホサイズで表示を変える。
+
+PCサイズ
+「Surface Book」「Xbox One」「Outlook」「Microsoft ストア」で1行
+4列1行
+
+タブレットサイズ
+「Surface Book」「Xbox One」で1行
+「Outlook」「Microsoft ストア」で1行
+2列2行
+
+スマホサイズ
+それぞれで1行
+1列4行
+
+「新しい Office 365 Enterprise」「Windows 10 Enterprise」「SQL Server 2016」「Dynamics CRM の営業支援」を、PC、タブレット、スマホサイズで表示を変える。
+
+PCサイズ 4列1行
+タブレットサイズ 2列2行
+スマホサイズ 1列4行
+
+大きいPCサイズ
+.col-lg-xx
+PCサイズ
+.col-md-xx
+タブレットサイズ
+.col-sm-xx
+スマホサイズ
+.col-xs-xx
+
+参考URL
+http://getbootstrap.com/css/#grid-options
+
+--------------------
+bootstrap_07
+--------------------
+「製品サイト」「デバイス」「Microsoftストア」「ダウンロード」「重要な情報」「企業情報」を、PC、タブレット、スマホサイズで表示を変える。
+
+PCサイズ 6列1行
+タブレットサイズ 3列2行
+スマホサイズ 1列6行
+
+ex06と同じ方法では、それぞれの高さが違うためレイアウトが崩れる。
+#sec06 ul {
+	min-height: 180px;
+}
+とすれば、タブレットサイズでは揃うが、スマホサイズで不必要な余白ができる。
+
+3列1行後に
+<div class="clearfix visible-sm"></div>
+を入れることで、floatがクリアされキレイに揃う
+
+参考URL
+http://getbootstrap.com/css/#responsive-utilities-classes
+
+--------------------
+bootstrap_08
+--------------------
+メニュー
+「ex08_nav.html」を追加、修正
+<nav>タグ内にclass名「navbar-fixed-top」（メニューを上部に固定）
+css bodyに「padding-top: 50px;」（メニューの高さ分）
+class名「sr-only」は、スクリーンリーダー用（画面には表示されない）
+メニューに<a href="#sec01">
+飛び先に<div id="sec01">
+同様にsec02、sec03、sec04、sec05
+
+「navbar-fixed-top」（メニューを上部に固定）すると表示位置がずれる。
+#sec01, #sec02, #sec03, #sec04, #sec05, #sec06 {
+	margin-top: -50px;（メニューの高さ分）
+	padding-top: 50px;（メニューの高さ分）
+}
+
+参考URL
+http://www.tam-tam.co.jp/tipsnote/html_css/post4776.html
+
+上記方法でも、すでにmarginやpaddingで調整している部分はずれる
+
+スマホ時メニューを自動で閉じるように
+<script>
+$('.nav a').on('click', function(){ $(".navbar-toggle").click(); });
+</script>
+
+参考URL
+http://blog.phiyard.net/entry/2014/10/08/175432
+
+--------------------
+bootstrap_09
+--------------------
+メニュー
+ロゴ画像追加
+<img src="img/log.png" alt="ロゴ">
+nav img { height: 100%; }
+
+--------------------
+bootstrap_10
+--------------------
+メニュー
+色変更
+class名「navbar-default」を「navbar-inverse」に変更することで黒くなる
+その他の色は下記URLの「TWBSColor」を使うと便利
+
+参考URL
+http://work.smarchal.com/twbscolor/
+
+--------------------
+bootstrap_scrollspy
+--------------------
+スクロール位置によりメニューの色変更
+css bodyに対し、position: relative;
+<body data-spy="scroll" data-target="#navbar-example">
+<nav id="navbar-example" 以下省略>
+
+参考URL
+http://getbootstrap.com/javascript/#scrollspy
+http://memopad.bitter.jp/web/bootstrap-3.3.2/_gh_pages/javascript/#scrollspy

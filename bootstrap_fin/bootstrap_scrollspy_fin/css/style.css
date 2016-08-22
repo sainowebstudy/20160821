@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+body {
+	font-family: Meiryo, "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+	color: #626262;
+	padding-top: 50px;
+	position: relative;
+}
+/* id名"sec"を含む */
+/*div[id*="sec"] { margin-bottom: 5em; }*/
+/* id名"sec"で始まる */
+/* div[id^="sec"] { margin-bottom: 100px; } */
+/* id名"sec"で終わる */
+/* div[id$="sec"] { margin-bottom: 100px; } */
+
+/* #sec02 .rowの直下にあるdiv、#sec03 .rowの直下にあるdivに適用 */
+/*
+#sec02 .row>div,
+#sec04 .row>div { margin-bottom: 4em;}
+*/
+
+#sec01, #sec03, #sec05 {
+	background-color: #eee;
+}
+#sec02, #sec04, #sec06 {
+	background-color: pink;
+}
+nav img { height: 100%; }
+
+
+#sec01-link, #sec02-link, #sec03-link, #sec04-link, #sec05-link, #sec06-link {
+	margin-top: 65;
+	padding-top: 65px;
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+	font-family: Meiryo, "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+	color: #626262;
+}
+/* id名"sec"を含む */
+div[id*="sec"] { padding-bottom: 5em; }
+/* id名"sec"で始まる */
+/* div[id^="sec"] { margin-bottom: 100px; } */
+/* id名"sec"で終わる */
+/* div[id$="sec"] { margin-bottom: 100px; } */
+#sec03 {
+	background-image: url(../img/back01.jpg);
+	background-size: cover;
+	padding: 150px 30px;
+}
+#sec05 {
+	background-image: url(../img/back02.jpg);
+	background-size: cover;
+	padding: 330px 0 30px;
+	color: white;
+}
+#sec06 {
+	background-color: #eee;
+}
+#sec06 h3 {
+	margin-left: 1em;
+	vertical-align: middle;
+}
+#sec06 .sec-line {
+	background-color: lightgray;
+	padding: 5px 0;
+	margin-bottom: 1em;
+}
+#sec06 img {
+	width: 32px;
+	height: 32px;
+}
+#sec06 ul {
+	list-style: none;
+	padding: 0;
+	font-size: 12px;
+	margin-bottom: 2em;
+}
+#sec06 li {
+	margin-bottom: 1em;
+}
+#sec06 ul {
+	min-height: 180px;
+}
+.container-small {
+	padding: 0 2em;
+}
+.dp-in {
+	display: inline;
+	margin-right: 1em;
+}
